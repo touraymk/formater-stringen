@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formater Stringen</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const outputHtml = document.getElementById("app");
+      let htmlStr = "terje";
+
+      updateView();
+      function updateView() {
+        outputHtml.innerHTML = /*html*/ `
+        <h1>${formattedString()}</h1>
+      `;
+      }
+
+      function formattedString(firstLetter) {
+        return htmlStr.charAt(0).toUpperCase() + htmlStr.slice(1);
+      }
+    </script>
+  </body>
+</html>
